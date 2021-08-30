@@ -2,8 +2,8 @@ from django.urls import path
 from staff.views import *
 
 urlpatterns = [
-    path('', index),
-    path('categories/<int:catid>/', categories),
+    path('', index, name='home'),
+    path('categories/<int:catid>/', categories, name='catid'),
 ]
 
 

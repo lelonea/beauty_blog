@@ -5,10 +5,16 @@
 
 <p>
 {% for post in posts %}
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content }}</p>
-    <a href={{ post.contact_url }}>{{ post.contact_url }} </a>
+    <ul>
+        <img src="../../../media/{{ post.photo }}" style="width: 250px; height: 300px">
+        <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <a href={{ post.contact_url }}>{{ post.contact_url }} </a>
+            <hr>
+        </li>
+    </ul>
 {% endfor %}
-</p>
+
 
 {% endblock %}
