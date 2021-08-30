@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Staff page')
+    return render(request, 'staff/base.html')
 
 
 def categories(request, catid):

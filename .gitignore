@@ -52,3 +52,4 @@ docs/_build/
 db.sqlite3
 .idea/
 requirements.txt
+to_bd.txt
