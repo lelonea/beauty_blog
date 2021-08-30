@@ -1,0 +1,14 @@
+{% extends 'staff/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<p>
+{% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+    <a href={{ post.contact_url }}>{{ post.contact_url }} </a>
+{% endfor %}
+</p>
+
+{% endblock %}

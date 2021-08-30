@@ -1,9 +1,14 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
+from .models import *
+
+menu = ['Login', 'Categories', 'About', 'Contacts']
+
 
 def index(request):
-    return render(request, 'staff/base.html')
+    posts = Staff.objects.all()
+    return render(request, 'staff/home.html', {'posts': posts, 'title': 'Staff page', 'menu': menu})
 
 
 def categories(request, catid):
